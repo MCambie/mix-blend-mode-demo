@@ -1,0 +1,121 @@
+
+
+$cmy : "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/CMYK_separation_%E2%80%93_no_black.jpg/268px-CMYK_separation_%E2%80%93_no_black.jpg";
+$cmyk : "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/CMYK_separation_%E2%80%93_maximum_black.jpg/201px-CMYK_separation_%E2%80%93_maximum_black.jpg";body {
+    font-family: 'Open Sans', ;
+    padding: 20px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.bg-blend {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/building.jpg);
+    background-color: red;
+    // background-blend-mode: multiply;
+  }
+  
+  .normal-image {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/building.jpg);
+  }
+  
+  .just-color {
+    background: red;
+  }
+  
+  body {
+    padding: 20px;
+  }
+  .demo > div {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+  }
+  .demo {
+    width: 600px;
+    overflow: hidden;
+  }
+  .bg-blend2 {
+    background-image: 
+      url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/grid.png),
+      url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/building.jpg);
+    background-blend-mode: multiply;
+    background-size: 16px 16px, cover;
+  }
+  
+  .image-2 {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/building.jpg);
+    background-size: cover;
+  }
+  
+  .image-1 {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/grid.png);
+    background-size: repeat;
+  }
+  .cmy {
+    background:
+      url($cmy) top left,
+      url($cmy) center center,
+      url($cmy) bottom right;
+    height: 200px;
+    
+    &:hover {
+      background-position:
+        top center,
+        center center,
+        bottom center;
+    }
+  }
+  
+  .cmyk {
+    background:
+      url($cmyk) top left,
+      url($cmyk) 402px 303px,
+      url($cmyk) 201px -150px,
+      url($cmyk) bottom right;
+    background-size: 25% 400%;
+    height: 150px;
+      
+    &:hover {
+      background-position:
+        top center,
+        center 303px,
+        center -150px,
+        bottom center;
+    }
+  }
+  
+  .cmy, .cmyk {
+    margin: .25rem auto;
+    width: 804px;
+    background-blend-mode: multiply;
+    background-color: white;
+    background-repeat: repeat-y;
+    transition: .25s .5s;
+    border-radius: .25rem;
+    
+    
+    &:hover {
+      transition: 1.5s 0;
+    }
+  }
+
+
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900);
+
+header {
+  padding: 120px 50px 170px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wisconsin-farmland-3.jpg);
+  background-size: cover;
+}
+header h1 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 130px;
+  color: red;
+  mix-blend-mode: screen;
+  padding: 0;
+  margin: 0;
+  line-height: 0.5;
+}
